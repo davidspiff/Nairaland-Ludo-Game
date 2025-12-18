@@ -126,7 +126,6 @@
 <div id="side-rail">
     <button id="auto-btn" class="side-btn" title="CPU AUTO"><span>🤖</span><small>AUTO</small></button>
     <button id="time-btn" class="side-btn" title="Toggle Timer"><span>⏱️</span><small>TIMER</small></button>
-    <button id="mode-btn" class="side-btn" title="Night Mode"><span>🌙</span><small>NIGHT</small></button>
     <button id="info-btn" class="side-btn" title="How to Play"><span>ℹ️</span><small>RULES</small></button>
 </div>
 
@@ -536,12 +535,6 @@ class App {
             this.auto = !this.auto; 
             e.target.classList.toggle('active', this.auto);
             if(this.auto && this.state=='ROLL') this.roll();
-        };
-
-        document.getElementById('mode-btn').onclick = (e) => {
-            this.nightMode = !this.nightMode;
-            e.target.classList.toggle('active', this.nightMode);
-            this.applyTheme();
         };
 
         document.getElementById('time-btn').onclick = (e) => {
